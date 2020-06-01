@@ -1,17 +1,20 @@
 package Questao1;
 
-public class TestaCarro{
+import Questao1.Carros.Carro;
+import Questao1.Fabrica.FabricaVolkswagen;
 
- FabricaVolkswagen fabrica;
-
- TestaCarro (FabricaVolkswagen fabrica){
-     this.fabrica = fabrica;
- }
-
- public void usaCarro(String tipo){
-    Carro carro;
-    carro = fabrica.CriarCarro(tipo);
-    carro.ligar();
- }
+public class TestaCarro {
+    //Attributes
+    private FabricaVolkswagen fabrica;
+    //Constructor
+    TestaCarro (FabricaVolkswagen fabrica){
+        this.fabrica = fabrica;
+    }
+    //Methods
+    public void usaCarro(String tipo){
+        Carro carro;
+        carro = fabrica.CriarCarro(tipo);
+        carro.ligar();
+    }
 
 }
